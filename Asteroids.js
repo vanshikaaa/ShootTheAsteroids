@@ -1,3 +1,6 @@
+//Here's the link to the game if you want to play it: file:///Users/Vanshika/Desktop/Asteroids/asteroids.html
+
+
 var canvas = null;
 var context = null;
 function Initialize()
