@@ -69,6 +69,8 @@ var dogFrames = [
     "images/rocket23.png",
     "images/rocket24.png",
     "images/rocket25.png",
+    /*"images/rocketright.png",
+    "images/rocketleft.png", */  
 
 ];
 
@@ -83,7 +85,10 @@ var dropArray = [
     ["yummy", "images/bluestar copy.png", "bluestar"],//2
     ["yummy", "images/redstar copy.png", "redstar"],//2
     ["yucky", "images/rock copy.png", "rock"],//2
-    ["yucky", "images/spacerock copy.png", "spacerock"]//2
+    ["yucky", "images/spacerock copy.png", "spacerock"],//2
+    ["yucky", "images/asteroiddraw.png", "draw"],
+    //["yummy", "images/greenstar.png", "greenstar"],//1
+    //["yummy", "images/greenstar copy.png", "greenstar"],//2
 ];
 
 var missileImg = new Image();
@@ -105,6 +110,8 @@ for(var i = 0; i < dogFrames.length; i++){
     dogs[dogFrames.length - 1].addEventListener("load", function(){
         InitializeGameState("");
     });    
+
+
 
 // reload dropper images
 var dropperImages = [];
@@ -418,7 +425,7 @@ function checkCollisions(){
                 droppers[enindex] = new explosion(dropper.x,dropper.y);
                 missiles[index] = new explosion(dropper.x + 15,dropper.y + 10);
                 if(dropper.me == "yucky"){
-                   score += 5;
+                   score = score + 8;
                 } 
                 if(dropper.me == "special"){
                 	score = score - 7
